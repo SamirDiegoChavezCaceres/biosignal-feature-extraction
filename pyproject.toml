@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biosignal-feature-extraction"
+version = "0.1.0"
+description = "Spectral band power (FFT) and wavelet energy (DWT) feature extraction from 1-D signals, with a classifier on synthetic data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Samir Chavez" }]
+dependencies = ["numpy", "scikit-learn>=1.3", "PyWavelets>=1.4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
