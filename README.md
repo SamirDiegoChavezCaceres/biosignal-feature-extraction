@@ -1,5 +1,7 @@
 # biosignal-feature-extraction
 
+[![CI](https://github.com/SamirDiegoChavezCaceres/biosignal-feature-extraction/actions/workflows/ci.yml/badge.svg)](https://github.com/SamirDiegoChavezCaceres/biosignal-feature-extraction/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 Turn a raw 1-D signal into features a model can use: **spectral band power**
 (FFT) and **wavelet energy** (DWT). A compact, well-tested take on the classic
 first step of any biosignal or sensor pipeline.
@@ -30,6 +32,15 @@ python scripts/demo.py
 from biosignal import band_power, wavelet_energy
 band_power(signal, fs=128)      # {'delta':.., 'theta':.., 'alpha':.., 'beta':.., 'gamma':..}
 wavelet_energy(signal, "db4")   # energy per decomposition level
+```
+
+## Results
+
+The FFT + wavelet features separate the three synthetic spectral classes at
+**>0.9 accuracy** (1.0 on the default seed). Reproduce:
+
+```bash
+python scripts/demo.py
 ```
 
 ## Tests
