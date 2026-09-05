@@ -8,6 +8,12 @@ first step of any biosignal or sensor pipeline.
 
 Everything runs on synthetic signals, so there is nothing to download.
 
+## Demo
+
+![demo](assets/demo.gif)
+
+Generate it with [VHS](https://github.com/charmbracelet/vhs): `vhs demo.tape`.
+
 ## What it shows
 
 - **Spectral band power** - the share of a signal's energy in each frequency
