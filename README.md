@@ -54,6 +54,13 @@ Covers that band power lands in the correct band for known frequencies, that
 wavelet energies normalize, and that the extracted features separate the classes
 (with and without the wavelet family).
 
+## Limitations and next steps
+
+- The synthetic signals are cleanly separable; real biosignals carry artifacts
+  and drift this does not model.
+- There is no denoising or artifact-rejection step before feature extraction.
+- Next: add bandpass filtering and test on a public dataset.
+
 ## License
 
 MIT.
