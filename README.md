@@ -12,6 +12,12 @@ Everything runs on synthetic signals, so there is nothing to download.
 
 ![demo](assets/demo.gif)
 
+The demo (`scripts/demo.py`) runs offline on synthetic 1-D signals generated at
+three dominant frequencies (sampled at 128 Hz). It (1) prints the FFT band power
+(delta, theta, alpha, beta, gamma) per signal class, showing each class peaks in
+its own band, and (2) trains a classifier on the combined FFT band and wavelet
+energy features and reports its accuracy.
+
 Generate it with [VHS](https://github.com/charmbracelet/vhs): `vhs demo.tape`.
 
 ## What it shows
